@@ -1,0 +1,17 @@
+Fitur: Melihat Detail Thread
+Sebagai seorang pengguna, saya ingin melihat detail data entitas thread yang berisi beberapa konten, salah satunya entitas comment.
+
+Payload:
+-
+
+Spesifikasi:
+- Ketika melihat detail thread yang tidak ada atau tidak valid:
+    - maka error
+- Ketika melihat detail thread yang valid:
+    - maka detail thread baru harus ditampilkan
+    - maka seluruh komentar yang terdapat pada thread harus ditampilkan
+    - maka komentar yang telah dihapus ditampilkan dengan konten **komentar telah dihapus**
+    - maka komentar ditampilkan dalam urutan dari yang dibuat lebih awal hingga yang terbaru  
+
+Catatan sisi sistem:
+- Tampilkan semua data sesuai dengan nilai thread yang dimasukkan

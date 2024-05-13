@@ -1,0 +1,20 @@
+Fitur: Menambahkan Thread
+Sebagai seorang pengguna, saya ingin menambahkan thread yang berisi sebuah konten sebagai entitas.
+
+Payload:
+- title (string)
+- body (string)
+
+Spesifikasi:
+- Ketika menambahkan thread tanpa melakukan/mendapatkan autentikasi (proses login),:
+    - maka error
+- Ketika menambahkan thread tanpa memberikan entitas yang dibutuhkan:
+    - maka error
+- Ketika menambahkan thread tanpa memberikan entitas yang tipe datanya tidak sesuai:
+    - maka error
+- Ketika menambahkan thread setelah melakukan autentikasi dan disertai payload yang benar:
+    - maka thread baru harus terbuat
+
+Catatan sisi sistem:
+- Simpan thread baru pada database
+- Kembalikan permintaan pengguna dengan nilai thread yang dimasukkan

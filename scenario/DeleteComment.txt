@@ -1,0 +1,20 @@
+Fitur: Menghapus Comment pada thread
+Sebagai seorang pengguna, saya ingin menghapus comment yang saya buat pada suatu Thread yang sudah ada.
+
+Payload:
+-
+
+Spesifikasi:
+- Ketika menghapus comment tanpa melakukan/mendapatkan autentikasi (proses login),:
+    - maka error
+- Ketika menghapus comment di thread yang tidak ada atau tidak valid:
+    - maka error
+- Ketika menghapus comment yang tidak ada atau tidak valid:
+    - maka error
+- Ketika menghapus comment di thread yang valid setelah melakukan autentikasi tapi tidak memiliki otoritas (bukan pemilik comment):
+    - maka error
+- Ketika menambahkan comment di thread yang valid setelah melakukan autentikasi dan memiliki otoritas (pemilik comment):
+    - maka comment terkait harus terhapus
+
+Catatan sisi sistem:
+- Ubah data comment terkait pada database (data penanda komentar sudah dihapus)

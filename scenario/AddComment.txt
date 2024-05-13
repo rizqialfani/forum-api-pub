@@ -1,0 +1,21 @@
+Fitur: Menambahkan Comment pada thread
+Sebagai seorang pengguna, saya ingin menambahkan comment yang berisi sebuah konten sebagai entitas pada suatu Thread yang sudah ada.
+
+Payload:
+- content (string)
+
+Spesifikasi:
+- Ketika menambahkan comment tanpa melakukan/mendapatkan autentikasi (proses login),:
+    - maka error
+- Ketika menambahkan comment di thread yang tidak ada atau tidak valid:
+    - maka error
+- Ketika menambahkan comment di thread yang valid tanpa memberikan entitas yang dibutuhkan:
+    - maka error
+- Ketika menambahkan comment di thread yang valid tanpa memberikan entitas yang tipe datanya tidak sesuai:
+    - maka error
+- Ketika menambahkan comment di thread yang valid setelah melakukan autentikasi dan disertai payload yang benar:
+    - maka thread baru harus terbuat
+
+Catatan sisi sistem:
+- Simpan comment baru pada database
+- Kembalikan permintaan pengguna dengan nilai comment yang dimasukkan
